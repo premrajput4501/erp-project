@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./talent-mapping.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+    <title>Talent Mapping</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <a href="./dashboard.html">TalentEdge</a>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="./talent-mapping.html" class="dropbtn">Talent Mapping v</a>
+                <div class="dropdown-content">
+                    <a href="./talent-mapping.html">Skill Tracker</a>
+                    <a href="./talent-mapping.html">Excellence Hub</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="./succession-pipeline.html" class="dropbtn">Succession Pipeline v</a>
+                <div class="dropdown-content">
+                    <a href="./succession-pipeline.html">RoleSync</a>
+                    <a href="./succession-pipeline.html">Candidate Stack</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="./performance-monitoring.html" class="dropbtn">Performance Monitoring v</a>
+                <div class="dropdown-content">
+                    <a href="./performance-monitoring.html">Vision Mapping</a>
+                    <a href="./performance-monitoring.html">Employee Insights</a>
+                </div>
+            </div>
+        </div>
+        <div class="account-dropdown">
+            <div class="account">Account</div>
+            <div class="account-dropdown-content">
+                <a href="./index.html">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="left-panel">
+            <div class="feature" id="skillTracker">Skill Tracker</div>
+            <div class="feature" id="excellenceHub">Excellence Hub</div>
+            <hr><br>
+            <div class="feature" id="skillTrackerData">Skill Tracker Data</div>
+            <div class="feature" id="excellenceHubData">Excellence Hub Data</div>
+        </div>
+        <div class="right-panel">
+            <div class="content" id="skillTrackerContent">
+                <h2>Skill Tracker</h2>
+                <p>Enter your details to track and analyze skills effectively.</p>
+
+                <form id="skillsForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Full name of the employee" required>
+
+                    <label for="skills">Skills:</label>
+                    <select id="skills" name="skills" required>
+                        <option value="">Select a skill</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Python">Python</option>
+                        <option value="SQL">SQL</option>
+                    </select>
+
+                    <label for="experience">Experience Level (Years):</label>
+                    <input type="number" id="experience" name="experience" min="0" placeholder="Years of experience" required>
+
+                    <label for="proficiency">Proficiency Rating:</label>
+                    <div class="rating-bar">
+                        <input type="range" id="proficiency" name="proficiency" min="1" max="10" value="5">
+                        <span id="ratingValue">5</span>
+                    </div>
+
+                    <button type="submit">Save Details</button>
+                </form>
+            </div>
+
+            <div class="content" id="excellenceHubContent">
+                <h2>Excellence Hub</h2>
+                <p>Input details to evaluate and enhance team performance.</p>
+
+                <form id="excellenceForm">
+                    <label for="empName">Employee Name:</label>
+                    <input type="text" id="empName" name="empName" placeholder="Full name of the employee" required>
+
+                    <label for="role">Role:</label>
+                    <input type="text" id="role" name="role" placeholder="Employee's role" required>
+
+                    <label for="performanceScore">Performance Score:</label>
+                    <input type="number" id="performanceScore" name="performanceScore" min="1" max="100" placeholder="Score out of 100" required>
+
+                    <label for="achievements">Achievements:</label>
+                    <textarea id="achievements" name="achievements" rows="4" placeholder="Key achievements" required></textarea>
+
+                    <label for="managerFeedback">Manager Feedback:</label>
+                    <textarea id="managerFeedback" name="managerFeedback" rows="4" placeholder="Feedback from manager" required></textarea>
+
+                    <label for="readinessRating">Readiness Rating:</label>
+                    <div class="rating-bar">
+                        <input type="range" id="readinessRating" name="readinessRating" min="1" max="10" value="5">
+                        <span id="readinessValue">5</span>
+                    </div>
+
+                    <label for="remarks">Additional Remarks:</label>
+                    <textarea id="remarks" name="remarks" rows="3" placeholder="Any additional remarks"></textarea>
+
+                    <button type="submit">Submit Evaluation</button>
+                </form>
+            </div>
+
+            <div class="content" id="skillTrackerDataContent">
+                <h2>Skill Tracker Data</h2>
+                <table id="skillTrackerTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Skill</th>
+                            <th>Experience (Years)</th>
+                            <th>Proficiency</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="content" id="excellenceHubDataContent">
+                <h2>Excellence Hub Data</h2>
+                <table id="excellenceHubTable">
+                    <thead>
+                        <tr>
+                            <th>Employee Name</th>
+                            <th>Role</th>
+                            <th>Performance Score</th>
+                            <th>Readiness Rating</th>
+                            <th>Achievements</th>
+                            <th>Manager Feedback</th>
+                            <th>Additional Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./talent-mapping.js"></script>
+</body>
+</html>
